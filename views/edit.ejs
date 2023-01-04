@@ -1,0 +1,53 @@
+<%- include('_header') %>
+<% if(user) { %>
+<div class="container mt-1">
+    <div class="card border-secundary">
+        <div class="card-header text-bg-dark">Edición de registro</div>
+        <div class="card-body text-bg-dark">
+
+            <!-- INICIO FORMULARIO UPDATE -->
+            
+            <form action="/update" method="POST">                                
+                <div class="mb-3">
+                    <label for="" class="form-label">ID:</label>
+                    <label for="" value="<%= user.id %>"><%= user.id %></label>
+                    <input name="id" id="id" value="<%= user.id %>" hidden>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Nombre</label><br>
+                    <input type="text" name="nombre" id="nombre" value="<%= user.nombre %>" placeholder="Nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Apellido</label><br>
+                    <input type="text" name="apellido" id="apellido" value="<%= user.apellido %>" placeholder="Apellido">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Edad</label><br>
+                    <input type="number" name="edad" id="edad" value="<%= user.edad %>" placeholder="Edad">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Sexo</label>
+                    <select name="genero" id="genero">
+                        <option <%= user.genero=='M'?"Selected":'' %> value="M" placeholder="Sexo">M</option>
+                        <option <%= user.genero=='F'?"Selected":'' %> value="F" placeholder="Sexo">F</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Grado</label><br>
+                    <input type="number" name="grado" id="grado" value="<%= user.grado %>" placeholder="Grado">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Grupo</label><br>
+                    <input type="text" name="grupo" id="grupo" value="<%= user.grupo %>" placeholder="Grupo">
+                </div>
+                <input type="submit" value="Agregar alumno" class="btn btn-primary">
+                <a href="/" class="btn btn-outline-danger">Cancelar</a>
+            </form>
+
+            <!-- FIN FORMULARIO -->
+
+        </div>
+    </div>
+</div>
+<% } %>
+<%- include('_footer') %>

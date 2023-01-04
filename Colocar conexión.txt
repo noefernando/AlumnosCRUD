@@ -1,0 +1,19 @@
+---Hacer conexión y ver los datos---
+
+1.-Acceder a la carpeta MYSQL_DB
+2.-Importar los datos del archivo estudiantes.sql
+3.-correr la aplicación de node.js con nodemon app.js
+
+---Crear alumno---
+
+Presionar el botón Nuevo para nuevos registros
+
+--Actualizar alumno---
+
+Ubicar el alumno a modificar y en la fila encontrara un botón amarillo con el texto editar, presionar el botón editar para borrar el registro.
+
+--Eliminar alumno---
+
+Ubicar el alumno a eliminar y en la fila encontrara un botón rojo con el texto eliminar, presionar el botón eliminar para borrar el registro.
+
+//Nota: los estilos de Bootstrap son mediante url de la web

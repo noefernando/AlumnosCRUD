@@ -1,0 +1,50 @@
+<%- include('_header') %>    
+<div class="text-center">
+    <h1>Alumnos - 2023</h1>      
+</div>      
+<script src="tema.js"></script>
+
+    <!-- Inicio de tabla alumnos -->
+      <div class="container">
+        <a href="/create" class="btn btn-outline-primary mt-4">Nuevo</a>
+        <table class="table table-bordered table-striped text-center mt-4" id="txt_tb">
+            <thead>
+                <tr class="bg-primary text-white">                    
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Grado</th>
+                    <th scope="col">Grupo</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <!-- Bucle para crear filas de los datos -->
+
+                <% results.forEach((user)=> { %>
+                
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.nombre %></td>
+                    <td><%= user.apellido %></td>
+                    <td><%= user.edad %></td>
+                    <td><%= user.genero %></td>
+                    <td><%= user.grado %></td>
+                    <td><%= user.grupo %></td>
+                    <td>
+                        <!-- REDIRECCIONAMIENTO con parametro ID -->
+                        <a href="/edit/<%= user.id %>" class="btn btn-outline-warning">Editar</a>
+                        <a href="/delete/<%= user.id %>" class="btn btn-outline-danger">Eliminar</a>
+                    </td>
+                </tr>
+                <% }) %>
+
+                <!-- Fin bucle -->
+
+            </tbody>
+        </table>
+      </div>        
+<%- include('_footer') %>

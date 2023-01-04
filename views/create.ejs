@@ -1,0 +1,46 @@
+<%- include('_header') %>
+<div class="container mt-3">
+    <div class="card border-secundary">
+        <div class="card-header text-bg-dark">Nuevo registro</div>
+        <div class="card-body text-bg-dark">
+
+            <!-- FORMULARIO para creacón de alumnos -->
+            
+            <form action="/save" method="post">                                
+                <div class="mb-3">
+                    <label for="user" class="form-label">Nombre</label><br>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="user" class="form-label">Apellido</label><br>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                </div>
+                <div class="mb-3">
+                    <label for="user" class="form-label">Edad</label><br>
+                    <input type="number" name="edad" id="edad" placeholder="Edad">
+                </div>
+                <div class="mb-3">
+                    <label for="user" class="form-label">Sexo</label><br>
+                    <select name="genero" id="genero">
+                        <option type="text" value="M" placeholder="Sexo">M</option>
+                        <option type="text" value="F" placeholder="Sexo">F</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="user" class="form-label">Grado</label><br>
+                    <input type="number" name="grado" id="grado" placeholder="Grado">
+                </div>
+                <div class="mb-3">
+                    <label for="user" class="form-label">Grupo</label><br>
+                    <input type="text" name="grupo" id="grupo" placeholder="Grupo">
+                </div>
+                <input type="submit" value="Agregar alumno" class="btn btn-primary">
+                <a href="/" class="btn btn-outline-danger">Cancelar</a>
+            </form>
+
+            <!-- FIN FORMULARIO -->
+
+        </div>
+    </div>
+</div>
+<%- include('_footer') %>

@@ -1,0 +1,28 @@
+<!-- APARTADO DE HEADER-->            
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>        
+  </head>
+  <nav class="navbar" data-bs-theme="dark" id="nav" style="background-color: #198754;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <div for="" class="col-auto align-items-center"><box-icon name='edit'></box-icon> Registro de alumnos 2023</div>        
+      </a>            
+        <button type="button" id="claro" class="btn btn-primary"><box-icon name='planet'></box-icon>TEMA</button>        
+        <script>
+          const tema = document.getElementById('claro');
+          tema.addEventListener('click',function(){            
+            document.getElementById('body').classList.toggle("text-bg-dark");            
+            document.getElementById('txt_tb').classList.toggle("table-dark");            
+            tema.classList.toggle("btn-light");
+          });
+        </script>       
+    </div>    
+  </nav>
+<body id="body">
