@@ -3,7 +3,7 @@
 1.-Acceder a la carpeta MYSQL_DB
 2.-Importar los datos del archivo estudiantes.sql
 3.-correr la aplicación de node.js con nodemon app.js
-
+4.-en el navegador ir a http://localhost:5000/
 ---Crear alumno---
 
 Presionar el botón Nuevo para nuevos registros
